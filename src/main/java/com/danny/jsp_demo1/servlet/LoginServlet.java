@@ -18,6 +18,9 @@ public class LoginServlet extends HttpServlet {
          * 如果有結果再比對密碼，密碼不對，回傳錯誤訊息
          * 密碼正確，跳轉到系統主頁
          */
+//        request.setAttribute("username",username);
+//        request.getRequestDispatcher("/userServlet").forward(request,response);
+
         if("admin".equals(username) && "666666".equals(password)){
             //密碼正確
             request.setAttribute("username",username);

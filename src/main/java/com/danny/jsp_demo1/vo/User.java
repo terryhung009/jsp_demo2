@@ -2,18 +2,18 @@ package com.danny.jsp_demo1.vo;
 
 public class User {
 
-    private String userId;
+    private Integer userId;
     private String userName;
     private Integer gender;
     private String userPassword;
     private Integer roleId;
     private String roleName;
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
