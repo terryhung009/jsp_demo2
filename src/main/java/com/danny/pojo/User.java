@@ -1,4 +1,4 @@
-package com.danny.vo;
+package com.danny.pojo;
 
 public class User {
 
@@ -55,5 +55,17 @@ public class User {
 
     public void setRoleName(String roleName) {
         this.roleName = roleName;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", gender=" + gender +
+                ", userPassword='" + userPassword + '\'' +
+                ", roleId=" + roleId +
+                ", roleName='" + roleName + '\'' +
+                '}';
     }
 }

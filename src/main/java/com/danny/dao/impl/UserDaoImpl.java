@@ -2,7 +2,7 @@ package com.danny.dao.impl;
 
 import com.danny.dao.UserDao;
 import com.danny.db.MysqlDB;
-import com.danny.vo.User;
+import com.danny.pojo.User;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,7 +17,6 @@ public class UserDaoImpl implements UserDao {
         Connection connection = mysqlDB.getConnect();
         Statement statement = null;
         ResultSet rs = null;
-//        PreparedStatement pps = null; //SQL injection
 
 
 
@@ -43,8 +42,48 @@ public class UserDaoImpl implements UserDao {
             e.printStackTrace();
         }finally {
             try {
-//                rs.close();
-//                statement.close();
+                rs.close();
+                statement.close();
+
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return list;
+    }
+
+    @Override
+    public User queryUserById(String userId) throws SQLException {
+        String sql = "SELECT u.* FROM userInfo u where u.userId = '" + userId + "'";
+        User user = null;
+        MysqlDB mysqlDB = new MysqlDB();
+        Connection connection = mysqlDB.getConnect();
+        Statement statement = null;
+        ResultSet rs = null;
+
+        try {
+            statement = connection.createStatement();
+            rs = statement.executeQuery(sql);
+
+
+            while(rs.next()){
+                user = new User();
+                user.setUserId(rs.getString("userId"));
+                user.setUserName(rs.getString("userName"));
+                user.setGender(rs.getInt("gender"));
+                user.setUserPassword(rs.getString("userPassword"));
+                user.setRoleId(rs.getInt("roleId"));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                rs.close();
+                statement.close();
 
                 connection.close();
             } catch (SQLException e) {
@@ -53,6 +92,6 @@ public class UserDaoImpl implements UserDao {
         }
 
 
-        return list;
+        return user;
     }
 }

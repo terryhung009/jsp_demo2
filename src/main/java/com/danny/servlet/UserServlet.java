@@ -2,7 +2,7 @@ package com.danny.servlet;
 
 import com.danny.service.UserService;
 import com.danny.service.impl.UserServiceImpl;
-import com.danny.vo.User;
+import com.danny.pojo.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

@@ -22,7 +22,7 @@
         <td>角色名稱</td>
         <td>操作</td>
     </tr>
-    <c:forEach items="${userlist}" var="l" varStatus="vs">
+    <c:forEach items="${userList}" var="l" varStatus="vs">
         <tr>
             <td>${vs.index + 1}</td>
             <td>${l.userId}</td>
