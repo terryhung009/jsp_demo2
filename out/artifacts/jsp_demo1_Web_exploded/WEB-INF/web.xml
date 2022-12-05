@@ -9,7 +9,7 @@
 
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.danny.servlet.LoginServlet</servlet-class>
+        <servlet-class>com.danny.jsp_demo1.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -18,7 +18,7 @@
 
     <servlet>
         <servlet-name>UserServlet</servlet-name>
-        <servlet-class>com.danny.servlet.UserServlet</servlet-class>
+        <servlet-class>com.danny.jsp_demo1.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserServlet</servlet-name>

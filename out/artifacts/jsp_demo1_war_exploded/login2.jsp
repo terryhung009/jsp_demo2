@@ -12,10 +12,10 @@
     <title>系統登入</title>
 </head>
 <body>
-    <form action="/userServlet" id="form" method="post">
+    <form action="/login" id="form" method="get">
          <input type="text" id="username" name="username" value="${username}" placeholder="請輸入帳號">
          <input type="password" id="password" name="password"  placeholder="請輸入密碼">
-         <button type="button" name="loginButton" onclick="loginVerify();" >登入 </button>
+         <button type="button" name="loginButton" onclick="loginVerify();">登入</button>
             ${error}
     </form>
 
@@ -34,7 +34,6 @@
             return;
         }
         //調用後端servlet，並將data進行傳遞
-        document.getElementById("form").submit();
 
 
 
