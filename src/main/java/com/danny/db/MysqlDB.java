@@ -5,7 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class MysqlDB {
-    private final static String DB_DRIVER = "com.mysql.jdbc.Driver";
+    private final static String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
+//    private final static String DB_DRIVER = "com.mysql.jdbc.Driver";
     private final static String DB_URL = "jdbc:mysql://localhost:3306/userdb?useUnicode=true&characterEncoding=utf8";
     private final static String DB_USER = "wilson";
     private final static String DB_PASSWORD = "password";

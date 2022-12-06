@@ -10,9 +10,15 @@
 <html>
 <head>
     <title>系統登入</title>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
 </head>
 <body>
     <form action="/userServlet" id="form" method="post">
+        <input type="hidden" value="0" name="type"/>
          <input type="text" id="username" name="username" value="${username}" placeholder="請輸入帳號">
          <input type="password" id="password" name="password"  placeholder="請輸入密碼">
          <button type="button" name="loginButton" onclick="loginVerify();" >登入 </button>

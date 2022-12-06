@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
             if(user != null && user.getUserPassword().equals(password)){
                 //密碼正確
                 request.setAttribute("username",username);
-                request.getRequestDispatcher("/userServlet").forward(request,response);
+                request.getRequestDispatcher("/userServlet?type=0").forward(request,response);
             }else{
                 //用戶名或密碼錯誤
                 request.setAttribute("username",username);

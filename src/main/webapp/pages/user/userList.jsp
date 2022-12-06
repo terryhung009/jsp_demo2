@@ -5,14 +5,20 @@
   Time: 02:16
   To change this template use File | Settings | File Templates.
 --%>
+<% String path = request.getContextPath(); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>使用者管理</title>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
 </head>
 <body>
-<button type="button" onclik="addUser();">新增</button>
+<button type="button" onclick="addUser();">新增</button>
 <table border="1">
     <tr>
         <td>ID</td>
@@ -51,7 +57,7 @@
 
 <script>
     function addUser(){
-
+        window.location.href = "<%=path%>/pages/user/addUser.jsp"
     }
     function editUser(){
 

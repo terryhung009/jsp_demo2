@@ -24,5 +24,12 @@ public class UserServiceImpl implements UserService {
         return result;
     }
 
+    @Override
+    public User addUser(User user) throws SQLException {
+        UserDao userDao = new UserDaoImpl();
+        userDao.addUser(user);
+        return user;
+    }
+
 
 }

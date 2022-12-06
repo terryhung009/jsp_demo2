@@ -10,4 +10,6 @@ public interface UserService {
     List<User> queryUsers();
 
     User queryUserById(String userId) throws SQLException;
+
+    User addUser(User user) throws SQLException;
 }

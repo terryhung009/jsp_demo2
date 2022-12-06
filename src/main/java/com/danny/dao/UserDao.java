@@ -10,4 +10,7 @@ public interface UserDao {
     List<User> queryUsers();
 
     User queryUserById(String userId) throws SQLException;
+
+    void addUser(User user) throws SQLException;
+
 }
